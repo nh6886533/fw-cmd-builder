@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-#version 0.2 增加山石防火墙v4版本配置
-#version 0.3 增加思科ASA防火墙配置
-#version 0.4 增加netscreen的防火墙配置
 
 #public module
 import os,re
@@ -563,18 +560,9 @@ class vender_manager:
 		with open(os.path.join(self.path, 'output.txt'), 'w') as file:
 			file.write(data)
 
+def main():
+	vender_manager(os.getcwd())
+
 if __name__ == '__main__': 
-	vender_manager(r'D:\softerware backup\python\fw command builder\0.2')
-	
-#	path = r'D:\softerware backup\python\fw command builder\0.2'
-#	file = InputFile(os.path.join(path, 'input.xlsx'))
-#	policy_info = {
-#	'src_add':file.get_address('src'),
-#	'dst_add':file.get_address('dst'),
-#	'service':file.get_service(),
-#	'action':file.get_action()
-#	}	
-#	builder = NetscreenBuilder(**policy_info)
-#	for i in builder.service:
-#		print(builder.make_service(i))
+	main()
 
