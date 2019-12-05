@@ -329,7 +329,7 @@ class NetscreenBuilder(FwCmdBuilder):
 						res += ' '.join(['set group address',i['zone'],group,'add','.'.join(range_start[0:3])+'.'+str(host)+'/32'])+'\n'
 				else:
 					res += ' '.join(['set group address',i['zone'],group,'add',i['add']+i['mask']])+'\n'
-		res = 'set group address '+group+'\n'+res
+#		res = 'set group address '+[]+group+'\n'+res
 		return res
 
 	def make_service(self, ser):
